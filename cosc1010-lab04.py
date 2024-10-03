@@ -166,6 +166,6 @@ print(f"This is the average maximum temperatures: {avg_max_temp}")
 
 #This is the easiest method
 list_of_temps.sort()
-print(f"This is max temp: {list_of_temps[0]}")
-print(f"This is min temp: {list_of_temps[-1]}")
+print(f"This is min temp: {list_of_temps[0]}")
+print(f"This is max temp: {list_of_temps[-1]}")
 
