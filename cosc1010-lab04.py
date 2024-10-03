@@ -1,8 +1,8 @@
-# Your Name Here
+# Chauncy Hendon
 # UWYO COSC 1010
-# Submission Date
+# 10/3/2024
 # Lab 03 
-# Lab Section: 
+# Lab Section: 12
 # Sources, people worked with, help given to: 
 # your
 # comments
@@ -99,7 +99,73 @@ min_temps = [
 # You cannot use any pre-existing functions (like mean()) and must perform the calculations manually.
 # Output the results of both calculations.
 
+list_of_temps = min_temps[:] + max_temps[:]
+
+#These print statesments were to check to make sure length of list was compiled properly
+#print(list_of_temps)
+#print(len(min_temps))
+#print(len(max_temps))
+#print(len(list_of_temps))
+
+
+#Number of checked items is to make sure I switch from computing lowest and highest temp
+number_of_checked_items = 0
+max_temp_sum = 0
+min_temp_sum = 0
+
+for temperature in list_of_temps:
+    number_of_checked_items += 1
+
+    if number_of_checked_items > len(min_temps):
+        max_temp_sum += temperature
+    else:
+        min_temp_sum += temperature
+
+avg_min_temp = min_temp_sum / len(min_temps)
+avg_max_temp = max_temp_sum / len(max_temps)
+
+print(f"This is the average minimum temperatures: {avg_min_temp}")
+print(f"This is the average maximum temperatures: {avg_max_temp}")
+
+#Below is checking to make sure I got the correct averages
+#It is commented out so the outputis not as cluttered
+
+#min_temp_sum = 0
+#for item in min_temps:
+    #min_temp_sum += item
+#print(min_temp_sum/len(min_temps))
+
+#max_temp_sum = 0
+#for item in max_temps:
+    #max_temp_sum += item
+#print(max_temp_sum/len(max_temps))
+
 # For the next part, determine the highest and lowest recorded temperatures.
 # HINT: You can find this information without using any logic or looping.
 
+#I am assuming for this section it is not ok for us to use the max() and min(). 
+#So, I made a loop regardless
+
+#This is getting max and min using max() min() functions
+#This is to check my work
+#print(f"This is the highest recorded temperature in Laramie: {max(list_of_temps)}")
+#print(f"This is the lowest recorded temperature in Laramie: {min(list_of_temps)}")
+
+#Here is the for loop though, because it was fun to write
+
+#number_compare_max = 0
+#number_compare_min = 0
+#for item in list_of_temps:
+    #if number_compare_max < item:
+        #number_compare_max = item
+    #if number_compare_min > item:
+        #number_compare_min = item
+
+#print(f"Max gotten through looping: {number_compare_max}")
+#print(f"Min gotten through looping: {number_compare_min}")
+
+#This is the easiest method
+list_of_temps.sort()
+print(f"This is max temp: {list_of_temps[0]}")
+print(f"This is min temp: {list_of_temps[-1]}")
 
